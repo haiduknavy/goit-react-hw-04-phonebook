@@ -21,12 +21,10 @@ const App = () => {
       setContacts(localContacts);
     }
   }, []);
-  
+
   useEffect(() => {
     localStorage.setItem('contacts', JSON.stringify(contacts));
   }, [contacts]);
-
-
 
   const addContact = formData => {
     const { name, number } = formData;
